@@ -3,15 +3,15 @@ A simple JS pssh parser
 ***
 
 ## How to use
-Require this package via npm
+Require this package via npm, then:
 
 ```javascript
 const psshParser = require('pssh-parser');
 ```
 
-Then you can use the following functions:
+After that you can use the following functions:
 
-- Parse PSSH text file entry.
+### Parse PSSH text file entry.
 ```javascript
 const fs = require('fs');
 
