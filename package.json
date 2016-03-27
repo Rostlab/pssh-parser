@@ -1,0 +1,35 @@
+{
+  "name": "pssh-parser",
+  "description": "A simple pssh parser",
+  "version": "0.1.0",
+  "homepage": "http://rostlab.org",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rostlab/pssh-parser.git"
+  },
+  "author": "Christian Dallago <code@dallago.us>",
+  "license": "GPL-3.0",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^1.0.0"
+  },
+  "keywords": [
+    "bio",
+    "biology",
+    "bioinformatics",
+    "pssh",
+    "parser",
+    "science"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "grunt"
+  },
+  "contributors": [
+    "Christian Dallago <code@dallago.us> (https://github.com/sacdallago)"
+  ],
+  "bugs": {
+    "url": "https://github.com/Rostlab/pssh-parser/issues"
+  }
+}
