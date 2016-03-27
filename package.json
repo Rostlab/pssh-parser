@@ -21,7 +21,8 @@
         "bioinformatics",
         "pssh",
         "parser",
-        "science"
+        "science",
+        "biojs"
     ],
     "main": "index.min.js",
     "scripts": {
