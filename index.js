@@ -8,7 +8,7 @@ module.exports = {
     parsePSSH2file : function(data){
         // Split the file into rows
         var rows = data.split(/\n/);
-        var result = rows
+        return rows
         // Map every comma separated element in the row to attributes
         .map(function(element){
             var attributes = element.split(',');
@@ -31,6 +31,5 @@ module.exports = {
         .filter(function(element){
             return element !== undefined;
         });
-        console.log(result);
     }
 };
