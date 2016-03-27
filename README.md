@@ -24,13 +24,13 @@ The `entries` variable will be an array of the form:
 ```javascript
 [
  {
-    protein_sequence_hash: abcdef123,
-    PDB_chain_hash: abcdef123,
-    Repeat_domains: 1,
-    E_value: 1E2,
-    Identity_Score: 0.2,
-    Match_length: 123,
-    Alignment: 1:30
+    protein_sequence_hash: "abcdef123",
+    PDB_chain_hash: "abcdef123",
+    Repeat_domains: "1",
+    E_value: "1E2",
+    Identity_Score: "0.2",
+    Match_length: "123",
+    Alignment: "1:30"
   }, ...
 ]
 ```
