@@ -21,7 +21,8 @@ module.exports = {
                     E_value: attributes[3],
                     Identity_Score: attributes[4],
                     Match_length: undefined,
-                    Alignment: attributes[5]
+                    // The replace removes ONE escape character (/r) in the last string that is left over from the data split into new lines
+                    Alignment: attributes[5].replace(/\r?\n|\r/,"")
                 };
             }
         })

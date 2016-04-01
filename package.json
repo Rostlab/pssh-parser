@@ -1,7 +1,7 @@
 {
     "name": "pssh-parser",
     "description": "A simple pssh parser",
-    "version": "0.1.3",
+    "version": "0.1.4",
     "homepage": "http://rostlab.org",
     "repository": {
         "type": "git",
@@ -24,7 +24,7 @@
         "science",
         "biojs"
     ],
-    "main": "index.min.js",
+    "main": "pssh.min.js",
     "scripts": {
         "test": "grunt"
     },

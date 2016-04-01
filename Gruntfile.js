@@ -2,12 +2,12 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
         jshint: {
-            files: ['index.js'],
+            files: ['pssh.js'],
         },
         uglify: {
             my_target: {
                 files: {
-                    'index.min.js': ['index.js']
+                    'pssh.min.js': ['pssh.js']
                 }
             }
         }

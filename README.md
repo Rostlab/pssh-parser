@@ -3,7 +3,7 @@ A simple JS pssh parser
 ***
 
 ## How to use
-Require this package via npm, then:
+Require this package via npm, download `pssh.js` or `pssh.min.js`, then:
 
 ```javascript
 const psshParser = require('pssh-parser');
