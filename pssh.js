@@ -26,7 +26,7 @@ module.exports = {
 
                 pieces.forEach(function(piece){
                     [start, end] = piece.split(/\-/);
-                    Match_length += (end-start+1);
+                    Match_length += (parseInt(end)-parseInt(start)+1);
                 });
 
                 return {
