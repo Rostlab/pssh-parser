@@ -1,7 +1,7 @@
 {
     "name": "pssh-parser",
     "description": "A simple pssh parser",
-    "version": "0.1.4",
+    "version": "0.1.5",
     "homepage": "http://rostlab.org",
     "repository": {
         "type": "git",

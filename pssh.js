@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */
+
 module.exports = {
     /* 2 Example entries of PSSH file:
     *
@@ -10,26 +12,38 @@ module.exports = {
         var rows = data.split(/\n/);
         return rows
         // Map every comma separated element in the row to attributes
-        .map(function(element){
+            .map(function(element){
             var attributes = element.split(',');
 
             if(attributes.length == 6){
+
+                // Eg: "1-40:2-41 43-53:42-52 54-87:54-87 89-107:88-106 109-149:107-147 150-179:149-178"
+                var Alignment = attributes[5].replace(/\r?\n|\r/,"");
+
+                // Eg: ["1-40:2-41", "43-53:42-52", "54-87:54-87", "89-107:88-106", "109-149:107-147", "150-179:149-178"]
+                var pieces = Alignment.split(/\s/g);
+                var Match_length = 0;
+
+                pieces.forEach(function(piece){
+                    [start, end] = piece.split(/\-/);
+                    Match_length += (end-start+1);
+                });
+
                 return {
                     protein_sequence_hash: attributes[0],
                     PDB_chain_hash: attributes[1],
                     Repeat_domains: attributes[2],
                     E_value: attributes[3],
                     Identity_Score: attributes[4],
-                    Match_length: undefined,
-                    // The replace removes ONE escape character (/r) in the last string that is left over from the data split into new lines
-                    Alignment: attributes[5].replace(/\r?\n|\r/,"")
+                    Match_length: Match_length,
+                    Alignment: Alignment
                 };
             }
         })
         // Filter to get rid of undefined:
         //    - Last row of file is usually empty.
         //    - If a row is nasty and has length != 6
-        .filter(function(element){
+            .filter(function(element){
             return element !== undefined;
         });
     }
